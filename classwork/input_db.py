@@ -3,15 +3,15 @@ from conf.connector import Connector
 
 connection, cursor = Connector.openDB()
 
-# query = """INSERT INTO product_category (id,category_name)
-#         VALUES
-#         (1,'Cheese'),
-#         (2,'Fruits'),
-#         (3,'Meat'),
-#         (4,'Fish'),
-#         (5,'Drink');"""
-# cursor.execute(query)
-# connection.commit()
+query = """INSERT INTO product_category (id,category_name)
+        VALUES
+        (1,'Cheese'),
+        (2,'Fruits'),
+        (3,'Meat'),
+        (4,'Fish'),
+        (5,'Drink');"""
+cursor.execute(query)
+connection.commit()
 
 query = """INSERT INTO country (id, country_name)
             VALUES
