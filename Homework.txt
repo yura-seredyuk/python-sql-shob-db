@@ -1,0 +1,7 @@
+1. Show the list of first and last names of the employees from London.
+2. Show the list of first and last names of the employees whose first name begins with letter A.
+3. Show the list of first, last names and ages of the employees whose age is greater than 55. The result should be sorted by last name.
+4. Calculate the greatest, the smallest and the average age among the employees from London.
+5. Show the list of cities in which the average age of employees is greater than 60 (the average age is also to be shown)
+6. Show first, last names and ages of 3 eldest employees.
+

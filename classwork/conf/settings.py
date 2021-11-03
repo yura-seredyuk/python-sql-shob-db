@@ -1,0 +1,5 @@
+USER = 'postgres'
+PASSWORD = 'dbP@$$w0Rd'
+HOST = 'localhost'
+PORT = '5433'
+DB_NAME = 'shop_db'

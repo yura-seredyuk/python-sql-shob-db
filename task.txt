@@ -1,0 +1,14 @@
+1. Show all info about the employee with ID 8.
+2. Calculate the count of employees from London.
+3. Show the first and last name(s) of the eldest employee(s). Use a subquery.
+
+4. Show first, last names and dates of birth of the employees who celebrate their birthdays this month.
+
+5. Show first and last names of the employees who used to serve orders shipped to Madrid.
+
+6. Show first and last names of the employees as well as the count of their orders shipped after required date during the year 2020 (use left join).
+
+7. Show the list of customers’ names who used to order the ‘Tofu’ product, along with the total amount of the product they have ordered and with the total sum for ordered product calculated.
+8. Show the list of french customers’ names who used to order non-french products (use left join).
+9. Show the list of product categories along with total ordering sums calculated for the orders made for the products of each category, during the year 2020.
+10. Show the list of cities where employees and customers are from and where orders have been made to. Duplicates should be eliminated.
