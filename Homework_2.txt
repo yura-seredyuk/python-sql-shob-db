@@ -1,0 +1,10 @@
+UML діаграма: https://drive.google.com/file/d/1jDfVSEPFpnW4lGx-HgrtDckfjpvyVs3H/view?usp=sharinghttps://drive.google.com/file/d/1jDfVSEPFpnW4lGx-HgrtDckfjpvyVs3H/view?usp=sharing
+
+Створити структуру проекту із відповідними інтерфейсами, шаблонами методів та властивостей.
+
+Заповнити таблиці бази даних фейковими даними (pip install Faker).
+city => 50 міст
+продукти => по 20 з кожної категорії
+
+Як результат виконання роботи здати створені *.py файли.  
+
