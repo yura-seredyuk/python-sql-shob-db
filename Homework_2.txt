@@ -1,10 +1,8 @@
-UML діаграма: https://drive.google.com/file/d/1jDfVSEPFpnW4lGx-HgrtDckfjpvyVs3H/view?usp=sharinghttps://drive.google.com/file/d/1jDfVSEPFpnW4lGx-HgrtDckfjpvyVs3H/view?usp=sharing
+UML діаграма: https://drive.google.com/file/d/1qYIiBMblRKqNHAFXvNlayUKWb0tl13LL/view?usp=sharing
+Посилання на класну роботу: https://github.com/yura-seredyuk/python-sql-shob-db/commits/master
 
-Створити структуру проекту із відповідними інтерфейсами, шаблонами методів та властивостей.
 
-Заповнити таблиці бази даних фейковими даними (pip install Faker).
-city => 50 міст
-продукти => по 20 з кожної категорії
+Створити структуру проекту із відповідними інтерфейсами, шаблонами методів та властивостей i класи Profile та Address.
 
-Як результат виконання роботи здати створені *.py файли.  
+Як результат виконання роботи здати створені *.py файли (посилання на комміт у репозиторії).  
 
