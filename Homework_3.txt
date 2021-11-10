@@ -2,7 +2,9 @@ UML діаграма: https://drive.google.com/file/d/1qYIiBMblRKqNHAFXvNlayUKWb
 Посилання на класну роботу: https://github.com/yura-seredyuk/python-sql-shob-db/commits/master
 
 
-Створити структуру проекту із відповідними інтерфейсами, шаблонами методів та властивостей i класи Profile та Address.
+Додати всі CRUD методи для користувача Admin та UnregUser, 
+Додати метод edit_employee для користувача Employee
+Додати методи edit_customer та get_ продуктів для користувача Customer
 
 Як результат виконання роботи здати створені *.py файли (посилання на комміт у репозиторії).  
 
