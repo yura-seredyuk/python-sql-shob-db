@@ -1,4 +1,5 @@
 from conf.connector import Connector
+import unittest
 
 
 class AdminFunc(Connector):
@@ -49,7 +50,8 @@ class AdminFunc(Connector):
         selector = f"""{list(data.keys())[0]} = '{list(data.values())[0]}'"""
         return self.deleteData(table, selector)
  
-    
+class AdminTest(unittest.TestCase):
+    pass
 
 if __name__ == "__main__":
 

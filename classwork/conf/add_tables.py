@@ -2,12 +2,14 @@ import psycopg2
 from .settings import *
 
 
-def create_tables():
+def create_tables(db_name = None):
+    if db_name is None:
+        db_name = DB_NAME
     connection = psycopg2.connect(user = USER,
                                 password = PASSWORD,
                                 host = HOST,
                                 port = PORT,
-                                database = DB_NAME)
+                                database = db_name)
 
 
     cursor = connection.cursor()

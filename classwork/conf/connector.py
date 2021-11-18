@@ -1,16 +1,35 @@
 import psycopg2
 from .settings import *
+import sys
+
 
 
 class Connector:
 
     @classmethod
+    def dbServerConnection(cls):
+        connection = psycopg2.connect(user = USER,
+                                    password = PASSWORD,
+                                    host = HOST,
+                                    port = PORT)
+        connection.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+        cursor = connection.cursor()
+        return connection, cursor
+
+    @classmethod
+    def dbServerConnectionClose(cls, connection ,cursor):
+        cursor.close()
+        connection.close()
+
+    @classmethod
     def openDB(cls):
+        if 'unittest' in sys.argv[0]:
+            db_name = 'test_db'
         connection = psycopg2.connect(user = USER,
                                     password = PASSWORD,
                                     host = HOST,
                                     port = PORT,
-                                    database = DB_NAME)
+                                    database = db_name)
         cursor = connection.cursor()
         return connection, cursor
 
@@ -18,6 +37,7 @@ class Connector:
     def closeDB(cls, connection ,cursor):
         cursor.close()
         connection.close()
+        
 
     def getData(self, table:tuple, fields:tuple, selector=''):
         connection, cursor = self.openDB()
