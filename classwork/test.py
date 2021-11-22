@@ -9,6 +9,14 @@ from admin import AdminFunc
 PRODUCT_DATA = [{
                     'category_name': 'Vine',
                 }]
+update_data = {
+        'search_field':'id',
+        'search_parameter': 1, 
+        'data':
+           {   
+            'category_name': 'Water',
+           } 
+    }
 
 class AdminTest(unittest.TestCase):
 
@@ -38,16 +46,34 @@ class AdminTest(unittest.TestCase):
     #     Connector.dbServerConnectionClose(connection, cursor)
     #     print('Database "test_db" was deleted.')
 
-    def test_post_data(self):
+    def test_1_post_data(self):
         connection, cursor = Connector.openDB()
         self.admin.add_product_category(PRODUCT_DATA)
         cursor.execute('SELECT * FROM product_category')
         rezults = cursor.fetchall()
+        print(rezults)
         self.assertEqual(rezults, [(1, 'Vine')])
+        print('Test 1.1 passed')
+
+        self.admin.edit_product_category(update_data)
+
+        cursor.execute('SELECT * FROM product_category')
+        rezults = cursor.fetchall()
+        print(rezults)
+        self.assertEqual(rezults, [(1, 'Water')])
+        print('Test 1.2 passed')
         Connector.closeDB(connection, cursor)
 
-    def test_edit_data(self):
-        pass
+    def test_2_edit_data(self):
+        connection, cursor = Connector.openDB()
+        self.admin.edit_product_category(update_data)
+
+        cursor.execute('SELECT * FROM product_category')
+        rezults = cursor.fetchall()
+        print(rezults)
+        self.assertEqual(rezults, [(1, 'Water')])
+        Connector.closeDB(connection, cursor)
+
 
 
 

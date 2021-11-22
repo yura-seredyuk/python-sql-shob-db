@@ -25,6 +25,8 @@ class Connector:
     def openDB(cls):
         if 'unittest' in sys.argv[0]:
             db_name = 'test_db'
+        else:
+            db_name = DB_NAME
         connection = psycopg2.connect(user = USER,
                                     password = PASSWORD,
                                     host = HOST,
@@ -98,3 +100,28 @@ class Connector:
         if rezult == []:
             return 1
         return rezult[-1][0] + 1
+
+    def register(self, login, password, role):
+        data = [{
+            'login': login,
+            'password': password,
+            'role': role,
+        }]
+        find_login = self.getData(('reg_base',),('login',),
+                    f"WHERE login = '{login}'")
+        if not find_login:
+            self.postData('reg_base', data=data)
+        else:
+            print('This login is already exists!')
+
+    def login_check(self, login, password, role):
+        find_login = self.getData(('reg_base',),('*',),
+                    f"WHERE login = '{login}'")
+        if find_login:
+            if password == find_login[0][2] and role == find_login[0][3]:
+                return find_login[0][0]
+            else:
+                return False
+        else:
+            return False
+            
